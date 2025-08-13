@@ -197,7 +197,6 @@ header nav ul li:hover::after {
 }
 
 
-/* Estilo do botão padrão */
 .btn {
   padding: 12px 16px;
   background: linear-gradient(90deg, #00f7ff, #0066ff);
@@ -207,13 +206,13 @@ header nav ul li:hover::after {
   font-weight: 600;
   cursor: pointer;
   border: none;
-  position: relative; /* Necessário para o efeito de brilho */
+  position: relative;
   overflow: hidden;
   z-index: 10;
   transform: translateX(200px);
   opacity: 0;
-  transition: transform 0.6s ease, opacity 0.6s ease;
-  transition-delay: 0.5s;
+  /* Unifica as transições para evitar conflitos */
+  transition: transform 0.6s ease 0.5s, opacity 0.6s ease 0.5s, all 0.3s ease;
 }
 
 .active .btn {
@@ -221,11 +220,11 @@ header nav ul li:hover::after {
   transform: translateX(0);
 }
 
-
 /* Efeito de brilho e escala no hover */
 .active .btn:hover {
+  /* Combina as transformações para que a escala não anule a posição */
   transform: translateX(0) scale(1.05);
-  box-shadow: 0 0 15px rgba(0, 247, 255, 0.7), 0 0 30px rgba(0, 102, 255, 0.5); /* Adiciona um brilho neon */
+  box-shadow: 0 0 15px rgba(0, 247, 255, 0.7), 0 0 30px rgba(0, 102, 255, 0.5);
 }
 
 /* Efeito de flash no botão */
@@ -233,17 +232,17 @@ header nav ul li:hover::after {
   content: "";
   position: absolute;
   top: 0;
-  left: -100%; /* Começa fora da tela */
+  left: -100%;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.2); /* Uma cor semi-transparente */
+  background: rgba(255, 255, 255, 0.2);
   transition: all 0.5s ease;
-  transform: skewX(-20deg); /* Inclina o efeito */
+  transform: skewX(-20deg);
   z-index: -1;
 }
 
 .active .btn:hover::after {
-  left: 100%; /* Move o efeito para fora do botão, criando um "flash" */
+  left: 100%;
 }
 
 .arrows {
@@ -362,6 +361,7 @@ header nav ul li:hover::after {
   top: 20%;
   left: 70%;
 }
+
 
 
 
