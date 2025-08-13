@@ -251,6 +251,7 @@ header nav ul li:hover::after {
   .arrows {
   position: absolute;
   width: 90vw; /* Ajusta a largura para 90% da viewport, igual ao header */
+  max-width: 1200px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -366,5 +367,6 @@ header nav ul li:hover::after {
   top: 20%;
   left: 70%;
 }
+
 
 
