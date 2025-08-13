@@ -224,7 +224,7 @@ header nav ul li:hover::after {
 
 
 /* Efeito de brilho e escala no hover */
-.btn:hover {
+.active .btn:hover {
   transform: scale(1.05); /* Aumenta um pouco o botão */
   box-shadow: 0 0 15px rgba(0, 247, 255, 0.7), 0 0 30px rgba(0, 102, 255, 0.5); /* Adiciona um brilho neon */
 }
@@ -243,7 +243,7 @@ header nav ul li:hover::after {
   z-index: -1;
 }
 
-.btn:hover::after {
+.active .btn:hover::after {
   left: 100%; /* Move o efeito para fora do botão, criando um "flash" */
 }
 
@@ -363,6 +363,7 @@ header nav ul li:hover::after {
   top: 20%;
   left: 70%;
 }
+
 
 
 
