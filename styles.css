@@ -248,9 +248,9 @@ header nav ul li:hover::after {
 }
 
 .arrows {
+  .arrows {
   position: absolute;
-  width: 90%;
-  max-width: 1200px;
+  width: 90vw; /* Ajusta a largura para 90% da viewport, igual ao header */
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -258,6 +258,8 @@ header nav ul li:hover::after {
   justify-content: space-between;
   align-items: center;
   z-index: 5;
+  padding: 0 50px; /* Adiciona o mesmo padding lateral do header */
+}
   /* Remove 'pointer-events' da div pai para simplificar. Os botões já cuidam disso. */
 }
 
@@ -364,3 +366,4 @@ header nav ul li:hover::after {
   top: 20%;
   left: 70%;
 }
+
