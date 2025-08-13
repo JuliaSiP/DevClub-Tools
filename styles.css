@@ -248,20 +248,16 @@ header nav ul li:hover::after {
 }
 
 .arrows {
-  .arrows {
-  position: absolute;
-  width: 90vw; /* Ajusta a largura para 90% da viewport, igual ao header */
-  max-width: 1200px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 5;
-  
-}
-  /* Remove 'pointer-events' da div pai para simplificar. Os botões já cuidam disso. */
+    position: absolute;
+    width: 90vw; /* Garante que a largura seja a mesma do header */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10; /* Aumenta o z-index para garantir que as setas apareçam por cima */
+    padding: 0 50px; /* Adiciona o mesmo padding lateral do header */
 }
 
 .arrow-btn {
