@@ -207,7 +207,6 @@ header nav ul li:hover::after {
   font-weight: 600;
   cursor: pointer;
   border: none;
-  transition: all 0.3s ease;
   position: relative; /* Necessário para o efeito de brilho */
   overflow: hidden;
   z-index: 10;
@@ -363,6 +362,7 @@ header nav ul li:hover::after {
   top: 20%;
   left: 70%;
 }
+
 
 
 
